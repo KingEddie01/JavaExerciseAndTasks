@@ -22,7 +22,7 @@ public class ElectricLight {
                         lights[0][2] = " ";
                     }
                     if (numbers.charAt(1) == '0'){
-                        lights[1][]
+
                     }
 
 
