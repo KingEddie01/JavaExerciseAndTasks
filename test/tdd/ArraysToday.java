@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ArraysToday {
     public static void main(String[] args) {
-        int [] numbers = new int[6];
+        int[] numbers = new int[6];
         numbers[0] = 3;
         numbers[1] = 45;
         numbers[2] = 10;
