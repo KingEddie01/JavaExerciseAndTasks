@@ -47,7 +47,7 @@ public class MbtiPersonalityTest {
 
     public static void test1() {
         System.out.println("What is your name ");
-        String name = input.nextLine();
+        String name  = input.next();
         if (name.matches("^[a-zA-Z]+$")) {
         }
         else {
