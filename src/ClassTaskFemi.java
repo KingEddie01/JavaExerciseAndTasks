@@ -23,7 +23,7 @@ public class ClassTaskFemi {
             if (number[1] > number[0]) {
                 number[6] = number[1];
             } else if (number[2] > number[1]) {
-                number[6] = number[3 ];
+                number[6] = number[3];
                 System.out.println();
             }
 

@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class CreditCardNumber {
@@ -6,9 +5,7 @@ public class CreditCardNumber {
     public static void main(String[] args) {
         creditCard();
     }
-
-
-        public static void creditCard(){
+    public static void creditCard(){
             Scanner input = new Scanner(System.in);
             System.out.println("Hello kindly enter card details to verify : ");
             String cardDetail = input.nextLine();
@@ -18,10 +15,12 @@ public class CreditCardNumber {
             int[] cardDetails = new int[cardDetail.length()];
 
             if (cardDetail.length() >= 13 && cardDetail.length() <= 16 ){
+
                 for (int num = 0; num < cardDetail.length(); num++)
                     cardDetails[num] = Integer.parseInt(String.valueOf(cardDetail.charAt(num)));
 
-                for (int counter = cardDetails.length -1; counter >= 0; counter-=2) {
+                for (int counter = cardDetails.length; counter > 0;) {
+                    counter-=2;
                     total1 = cardDetails[counter] * 2;
                     if (total1 > 9) {
                         sum = (total1 / 10) + (total1 % 10);
@@ -35,7 +34,6 @@ public class CreditCardNumber {
                     secondSum += cardDetails[digit];
                 }
                 totalSum = firstSum + secondSum;
-
 
                 if (cardDetails[0] == 4 && totalSum % 10 == 0) {
                     System.out.print("*".repeat(20) + "\n" + "** CREDIT CARD TYPE : VISA CARD" + "\n" + "** CREDIT CARD NUMBER : " + cardDetail + "\n" +
@@ -53,9 +51,8 @@ public class CreditCardNumber {
                     System.out.println(" CREDIT CARD IS INVALID");
                     creditCard();
                 }
-
-
-            } else {
+            }
+            else {
                 System.out.println("ENTER A VALID CREDIT CARD NUMBER");
                 creditCard();
             }
